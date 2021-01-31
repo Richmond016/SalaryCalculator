@@ -1,0 +1,48 @@
+﻿@model SalaryCalculator.Models.salary
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+<head>
+
+</head>
+
+<body>
+    <h2>Employee salary calculator</h2>
+
+    <div class="row">
+        @using (Html.BeginForm("/Index", "home", FormMethod.Post))
+        {
+            <div class=" form-group">
+                <label for="name"> Employee name :</label>
+                <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" />
+            </div>
+
+            <div class=" form-group">
+                <label for="salary">Basic Salalry :</label>
+                <input type="text" class="form-control" id="sal" value="@Model.sal" />
+            </div>
+
+            <div class=" form-group">
+                <label for="tax">Tax :</label>
+                <input type="text" class="form-control" id="tax" value="@Model.tax" />
+            </div>
+
+            <div class=" form-group">
+                <label for="nSalaray">Employee name :</label>
+                <input type="text" class="form-control" id="net" value="@Model.net" />
+            </div>
+
+
+                <button type="submit" class="btn btn-info" id="add" value="add"> Ok </button>
+
+        }
+
+
+    </div>
+</body>
+
+
+</html>
